@@ -32,8 +32,8 @@ const AllCrops = () => {
             <h3 style={{ textAlign: 'center' }}>Crop Name: {crop.crop}</h3>
             <div className="crop-details">
               <div>
-              <h4>Farmer Name: {crop.farmerName}</h4>
-                <h4>Stock: {crop.quantity}</h4>
+              <h4>Farmer Name: {crop.FarmerName}</h4>
+                <h4>Stock: {crop.stock}</h4>
                 <h4>Price: {crop.price} per {crop.measurement}</h4>
               </div>
               <div>
