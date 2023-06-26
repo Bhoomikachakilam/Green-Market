@@ -1,9 +1,10 @@
 import User from "../models/User.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-const welcome = () => {
-  res.send("Welcome")
-}
+const welcome = (req, res) => {
+  res.send("Welcome");
+};
+
 const register = async (req, res, next) => {
   try {
     const { name, email, password, role, mobile, village } = req.body;
