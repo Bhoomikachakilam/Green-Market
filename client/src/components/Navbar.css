@@ -1,0 +1,27 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+ padding: 0.5rem; 
+  background-color: #54B435;
+}
+.image {
+  height: 100%;
+  width: 10%;
+}
+.About {
+  display: flex;
+  align-items: center;
+}
+.About > * + * {
+  margin-left: 1rem;
+}
+.no-underline {
+  text-decoration: none;
+  color: #F0F0F0;
+  font-weight: 700;
+}
+.no-underline:hover {
+  color: white;
+}
