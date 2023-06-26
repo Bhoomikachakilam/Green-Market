@@ -16,7 +16,7 @@ const Addcrops= () => {
       try {
         const token = localStorage.getItem('token');
       const response = await axios.post(
-        "http://localhost:5000/greenmarket/addcrop",
+        "https://greenmarket.onrender.com/addcrop",
         {
           Farmername,
           crop,

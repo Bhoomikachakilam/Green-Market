@@ -38,7 +38,7 @@ const RegisterForm = ({ history }) => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:5000/greenmarket/register",
+        "https://greenmarket.onrender.com/register",
         {
           name,
           email,

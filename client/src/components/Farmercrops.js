@@ -12,7 +12,7 @@ const FarmerCrops = () => {
             Authorization: `Bearer ${token}`,
           },
         };
-        const response = await axios.get('http://localhost:5000/greenmarket/getcropsbyFarmer', config);
+        const response = await axios.get('https://greenmarket.onrender.com/getcropsbyFarmer', config);
         setCrops(response.data);
       } catch (error) {
         console.error(error);

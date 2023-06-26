@@ -9,7 +9,7 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/greenmarket/login', {
+      const response = await axios.post('https://greenmarket.onrender.com/login', {
         email,
         password,
       });
