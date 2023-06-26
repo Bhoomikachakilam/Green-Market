@@ -1,0 +1,21 @@
+
+.LandingPage {
+    height: 91vh; 
+    background-color: #54B435;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .landing-image {
+    height: 100%;
+    width: 100vw;
+    max-width: 100%;
+  }
+ 
+  
+  
+  
+  
+  
+  
