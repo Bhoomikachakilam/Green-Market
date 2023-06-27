@@ -42,6 +42,35 @@ const getCrops = async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, error: error.message });
   }
+};const updateCropByFarmer = async (req, res) => {
+  try {
+    const { crop, stock, measurement, price, village, mobile } = req.body;
+    const { cropId } = req.params;
+
+    const updatedCrop = await Farm.findOneAndUpdate(
+      { _id: cropId, farmer: req.user.userId },
+      { crop, stock, measurement, price, village, mobile },
+      { new: true }
+    );
+
+    if (!updatedCrop) {
+      return res.status(404).json({ success: false, message: "Crop not found or unauthorized" });
+    }
+
+    res.json({
+      id: updatedCrop._id,
+      Farmername: updatedCrop.Farmername,
+      crop: updatedCrop.crop,
+      stock: updatedCrop.stock,
+      measurement: updatedCrop.measurement,
+      price: updatedCrop.price,
+      village: updatedCrop.village,
+      mobile: updatedCrop.mobile,
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
 };
-export { addCrop, getCropsByFarmer,getCrops };
+
+export { addCrop, getCropsByFarmer, getCrops, updateCropByFarmer };
 

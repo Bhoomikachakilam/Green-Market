@@ -1,0 +1,21 @@
+.farmer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+  }
+  
+  .farmer-heading {
+    color: #333;
+  }
+  .h4{
+    justify-content: center;
+  }
+  
+  
+  .select-input {
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
